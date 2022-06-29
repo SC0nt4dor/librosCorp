@@ -1,10 +1,8 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/../../css/style.css">
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <meta charset="utf-8">
@@ -12,7 +10,6 @@
   <title>LibrosCorp</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-
 <body>
   <header class="header">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -39,11 +36,9 @@
                 <a class="nav-link active" aria-current="page" href="{{url('/Logout')}}">Cerrar sesion</a>
               </li>
             @endauth
-
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Soporte</a>
             </li>
-
           </ul>
           <form class="d-flex" role="search" type="get" action="{{url('/Busqueda')}}">
             <input class="form-control me-2" type="search" name="buscar" placeholder="nombre del libro" aria-label="Search">
@@ -57,45 +52,26 @@
     @yield('content')
   </main>
   <footer class="text-center text-white" style="background-color: #f1f1f1;">
-
-    <!-- Grid container -->
     <div class="container pt-4">
-      <!-- Section: Social media -->
       <section class="mb-4">
-        <!-- Facebook -->
         <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
-
-        <!-- Twitter -->
         <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
-
-        <!-- Google -->
         <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
-
-        <!-- Instagram -->
         <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
-
-        <!-- Linkedin -->
         <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
-        <!-- Github -->
         <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
       </section>
-      <!-- Section: Social media -->
     </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
     <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright:
-      <a class="text-dark" href="#" !>LibrosCorp.cl</a>
+      <a class="text-dark" href="#">LibrosCorp.cl</a>
     </div>
-    <!-- Copyright -->
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
-
-
 <style>
-
+  footer{
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
 </style>
-
 </html>
