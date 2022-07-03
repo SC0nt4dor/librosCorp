@@ -13,13 +13,13 @@ class CotizacionController extends Controller
     public function mostrar($ID_libro){
      $libro= libro::find($ID_libro);
      $ficha_tecnica= ficha_tecnica::find($ID_libro);
-     $cotizacion= cotizacion::find($ID_libro);
+     $cotizacion= cotizacion::find($libro);
      return view('Libro',['libro'=>$libro,'ficha_tecnica'=>$ficha_tecnica,'cotizacion'=>$cotizacion]);
      return $this->obtenerDatos($cotizacion);
     }
 
     public function obtenerDatos($cotizacion){
-    
+
     }
 
 
