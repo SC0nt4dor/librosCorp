@@ -27,7 +27,7 @@ class usuarioController extends Controller
     }
     
     public function Ingreso(loginRequest $request){
-        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+        if(Auth::attempt(['email'=>$request->email,'contraseña'=>$request->contraseña])){
             return redirect('/Principal');
         }
         else{
