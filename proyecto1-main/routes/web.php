@@ -9,7 +9,7 @@ use App\Http\Controllers\usuarioController;
 
 Route::get('/', function (){return view('Home');});
 Route::get('/Ingreso',[usuarioController::class,'vistaLogin']);
-Route::post('/Ingreso',[usuarioController::class,'Ingreso']);
+Route::post('/Ingreso',[usuarioController::class,'store']);
 Route::get('/Guardados',function(){return view('Guardados');});
 Route::get('/Registro',function(){return view('Registro');});
 Route::post('/Registro',[usuarioController::class,'Registro']);

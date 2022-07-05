@@ -26,13 +26,18 @@ class usuarioController extends Controller
         return view('Ingreso');
     }
     
-    public function Ingreso(loginRequest $request){
-        if(Auth::attempt(['email'=>$request->email,'contraseña'=>$request->contraseña])){
-            return redirect('/Principal');
+    public function create()
+    {
+        return view('auth.login');
+    }
+
+    public function store(){
+        if(! auth()->attempt(request(['email','password']))){
+            return back()->withErrors([
+                'message' => 'Please check your credentials and try again'
+            ]);
         }
-        else{
-            return redirect('/Ingreso')->with('Error','Usuario o contraseña incorrectos');
-        }
+        return redirect()->to('/');
     }
 }
 
