@@ -25,19 +25,7 @@ class usuarioController extends Controller
     public function vistaLogin(){
         return view('Ingreso');
     }
-    
-    public function create()
-    {
-        return view('auth.login');
-    }
 
-    public function store(){
-        if(! auth()->attempt(request(['email','password']))){
-            return back()->withErrors([
-                'message' => 'Please check your credentials and try again'
-            ]);
-        }
-        return redirect()->to('/');
-    }
+
 }
 
