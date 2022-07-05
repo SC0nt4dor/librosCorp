@@ -25,19 +25,19 @@ class loginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email'=>'required',
-            'contraseña'=>'required'
+           /* 'email'=>'required',
+            'contraseña'=>'required'*/
         ];
     }
     public function getCredentials(){
-        $email=$this->get('email');
+      /*  $email=$this->get('email');
         if($this->isnombre($email)){
         return['email'=>$email,'contraseña'=> $this->get('contraseña')];
        }
-       return $this->only('email','contraseña');
+       return $this->only('email','contraseña');*/
     }
-    public function isnombre($value){
+   /* public function isnombre($value){
         $factory=$this->container->make(ValidationFactory::class);
         return !$factory->make(['email'=>$value],['email'=>'nombre'])->fails();
-    }
+    }*/
 }
