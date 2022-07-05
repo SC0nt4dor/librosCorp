@@ -16,6 +16,9 @@
 
     </div>
 
+
+
+
     <div>
         <div class=tbcomp>
 
@@ -26,13 +29,15 @@
        <th>Stock</th>
        <th>referencia</th>
         </tr>
+        @foreach($cotizacion as $cotizacion)
         <tr>
 
-            <td>{{$cotizacion['tienda']}}</td>
-            <td>{{$cotizacion['precio']}}</td>
-            <td>{{$cotizacion['stock']}}</td>
-            <td>{{$cotizacion['referencia']}}</td>
+            <td>{{$cotizacion->tienda}}</td>
+            <td>{{$cotizacion->precio}}</td>
+            <td>{{$cotizacion->stock}}</td>
+            <td>{{$cotizacion->referencia}}</td>
         </tr>
+        @endforeach
        </table>
 
         </div>

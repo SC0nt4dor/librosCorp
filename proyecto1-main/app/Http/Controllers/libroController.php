@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ficha_tecnica;
 use App\Models\libro;
 use Illuminate\Http\Request;
 

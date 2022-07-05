@@ -13,7 +13,7 @@ class CotizacionController extends Controller
     public function mostrar($ID_libro){
      $libro= libro::find($ID_libro);
      $ficha_tecnica= ficha_tecnica::find($ID_libro);
-     $cotizacion= cotizacion::find($libro);
+     $cotizacion=cotizacion::where('ID_libro','LIKE','%'.$ID_libro.'%')->get();
      return view('Libro',['libro'=>$libro,'ficha_tecnica'=>$ficha_tecnica,'cotizacion'=>$cotizacion]);
      return $this->obtenerDatos($cotizacion);
     }

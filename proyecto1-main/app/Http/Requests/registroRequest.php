@@ -13,7 +13,7 @@ class registroRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -31,5 +31,5 @@ class registroRequest extends FormRequest
           'contraseña_confirmacion'=>'required|same:contraseña'
         ];
     }
-   
+
 }

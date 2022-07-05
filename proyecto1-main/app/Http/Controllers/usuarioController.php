@@ -19,7 +19,7 @@ class usuarioController extends Controller
 
     public function Registro(registroRequest $request){
     $usuario=usuario::create($request->validated());
-    return view('Registro');
+    return redirect('/Principal')->with('Felicitaciones','su cuenta ha sido creada');
     }
 
 

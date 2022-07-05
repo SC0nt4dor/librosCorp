@@ -14,6 +14,7 @@
 <th scope="row">{{''}}</th>
 <td ><a href="Libro/{{$libro->ID_libro}}"><image style="width: 100px" src={{$libro->LinkImagen}}></a></td>
 <td style="text-align:left">{{$libro->titulo}}</td>
+<td>{{''}} </td>
 <td></td>
 </tr>
 

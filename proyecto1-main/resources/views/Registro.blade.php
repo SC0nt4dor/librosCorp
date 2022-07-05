@@ -3,7 +3,7 @@
 <div class="loginform">
     <h3 class="titulo">Crear cuenta</h3>
     <form action="Registro" method="POST" >
-        @csrf
+       @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre</label>
             <input  class="form-control" name="nombre" aria-describedby="emailHelp">
