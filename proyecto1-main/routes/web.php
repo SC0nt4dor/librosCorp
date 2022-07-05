@@ -7,7 +7,7 @@ use App\Http\Controllers\usuario as ControllersUsuario;
 use App\Http\Controllers\CotizacionController as CotizacionController;
 use App\Http\Controllers\usuarioController;
 
-Route::get('/Home', function (){return view('Home');});
+Route::get('/', function (){return view('Home');});
 Route::get('/Ingreso',[usuarioController::class,'vistaLogin']);
 Route::post('/Ingreso',[usuarioController::class,'Ingreso']);
 Route::get('/Guardados',function(){return view('Guardados');});

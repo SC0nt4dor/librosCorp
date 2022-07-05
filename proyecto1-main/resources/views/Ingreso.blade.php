@@ -19,7 +19,7 @@
         <a href="{{url('/Registro')}}">¿No tienes cuenta?, !Registrate¡</a>
     </form>
 </div>
-
+@endsection
 <style>
     .loginform {
         width: 22rem;
@@ -32,4 +32,4 @@
         text-align: center;
     }
 </style>
-@endsection
+

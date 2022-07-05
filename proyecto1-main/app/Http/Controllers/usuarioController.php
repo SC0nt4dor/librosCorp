@@ -22,28 +22,17 @@ class usuarioController extends Controller
     return redirect('/Principal')->with('Felicitaciones','su cuenta ha sido creada');
     }
 
-
-    public function vistaLogin( ){
-        if(auth::check()){
-        return redirect('/Ingreso');
+    public function vistaLogin(){
+        return view('Ingreso');
     }
+    
+    public function Ingreso(loginRequest $request){
+        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+            return redirect('/Principal');
         }
-    public function Ingreso(loginRequest $request) {
-    $credentials=$request->getCredentials();
-    if(Auth::validate($credentials)){
-        return redirect()->to('/Ingreso')->withErrors('auth.failed');
-    }
-    $usuario=auth::getProvider()->retrieveByCredentials($credentials);
-    auth::login($usuario);
-    return $this->authenticaded($request,$usuario);
-
-    }
-    public function authenticaded(Request $request,$Usuario){
-    return redirect('/Home');
-    }
-    public function CerrarSesion() {
-     Session::flush();
-     Auth::logout();
+        else{
+            return redirect('/Ingreso')->with('Error','Usuario o contraseña incorrectos');
+        }
     }
 }
 
