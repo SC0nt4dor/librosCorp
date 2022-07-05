@@ -6,10 +6,11 @@ use App\Http\Controllers\libroController as libroController;
 use App\Http\Controllers\usuario as ControllersUsuario;
 use App\Http\Controllers\CotizacionController as CotizacionController;
 use App\Http\Controllers\usuarioController;
+use App\Http\Controllers\loginController;
 
 Route::get('/', function (){return view('Home');});
-Route::get('/Ingreso',[usuarioController::class,'vistaLogin']);
-Route::post('/Ingreso',[usuarioController::class,'store']);
+Route::get('/Ingreso',[loginController::class,'create']);
+Route::post('/Ingreso',[loginController::class,'store']);
 Route::get('/Guardados',function(){return view('Guardados');});
 Route::get('/Registro',function(){return view('Registro');});
 Route::post('/Registro',[usuarioController::class,'Registro']);
